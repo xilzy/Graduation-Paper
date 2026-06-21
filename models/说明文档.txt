@@ -1,0 +1,3 @@
+modify0:最初没挑战ssim系数的那个模型
+modify1-5：L_structrue的系数分别为1,1.25,1.5,1.75,2
+modify6-7:分别为只用L_content和只用L_structure(什么都用的情况一定在上面几种之一，什么都不用的情况就是原模型)
