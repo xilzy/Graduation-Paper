@@ -1,5 +1,14 @@
 function RES=normalize1(data)
 
+% function RES=normalize1(data)
+%
+% This function is to NORMALIZE the data. 
+% The data will be in the interval 0-255 (gray level) and pixel value has
+% been rounded to an integer.
+% 
+% See also: normalize.m 
+%
+% Z. Liu @NRCC (Aug 24, 2009)
 
 data=double(data);
 da=max(data(:));
