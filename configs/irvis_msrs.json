@@ -1,0 +1,17 @@
+{
+  "task": "irvis",
+  "pairing": "folder",
+  "train_a_dir": "/ytech_m2v4_hdd/lizhongyin/data/MSRS/train/vi",
+  "train_b_dir": "/ytech_m2v4_hdd/lizhongyin/data/MSRS/train/ir",
+  "test_a_dir": "/ytech_m2v4_hdd/lizhongyin/data/MSRS/test/vi",
+  "test_b_dir": "/ytech_m2v4_hdd/lizhongyin/data/MSRS/test/ir",
+  "a_suffix": ".png",
+  "b_suffix": ".png",
+  "color_a": true,
+  "color_b": false,
+  "probe_size": 15,
+  "output_mode": "gray",
+  "color_source": "a",
+  "func_source": "b",
+  "_note": "MSRS IR-VIS. A=visible(color, chroma kept for optional RGB output), B=infrared(gray). Pre-registered, both 640x480. func_source=b -> thermal-target saliency (FUNCTION axis transfers from GFP fluorescence to IR hot targets)."
+}

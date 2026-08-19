@@ -1,0 +1,22 @@
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+MoE params 1.39M  routing=deepseek tasks=['gfp_pc', 'irvis', 'medical']
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/losses/__init__.py:256: UserWarning: torch.cholesky is deprecated in favor of torch.linalg.cholesky and will be removed in a future PyTorch release.
+L = torch.cholesky(A)
+should be replaced with
+L = torch.linalg.cholesky(A)
+and
+U = torch.cholesky(A, upper=True)
+should be replaced with
+U = torch.linalg.cholesky(A).mH
+This transform will produce equivalent results for all valid (symmetric positive definite) inputs. (Triggered internally at /pytorch/aten/src/ATen/native/BatchLinearAlgebra.cpp:1765.)
+  x = torch.cholesky(x)
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/train_moe_curri.py:123: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  tl_sum[tn] += float(lt) * int(m.sum()); tl_n[tn] += int(m.sum())
+ep1/3 lr1.00e-03 loss2.9871 per-task-loss{'gfp_pc': 2.773, 'irvis': 2.524, 'medical': 3.663} quota{'gfp_pc': 118, 'irvis': 120, 'medical': 120} 17s
+ep2/3 lr8.00e-04 loss2.8359 per-task-loss{'gfp_pc': 2.408, 'irvis': 2.463, 'medical': 3.416} quota{'gfp_pc': 111, 'irvis': 101, 'medical': 147} 12s
+ep3/3 lr6.40e-04 loss2.7629 per-task-loss{'gfp_pc': 2.456, 'irvis': 2.389, 'medical': 3.239} quota{'gfp_pc': 104, 'irvis': 106, 'medical': 148} 13s
+training done

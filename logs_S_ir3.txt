@@ -1,0 +1,46 @@
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+staged MoE 1.50M  tasks=['gfp_pc', 'irvis', 'medical'] irvis=idx1
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/losses/__init__.py:256: UserWarning: torch.cholesky is deprecated in favor of torch.linalg.cholesky and will be removed in a future PyTorch release.
+L = torch.cholesky(A)
+should be replaced with
+L = torch.linalg.cholesky(A)
+and
+U = torch.cholesky(A, upper=True)
+should be replaced with
+U = torch.linalg.cholesky(A).mH
+This transform will produce equivalent results for all valid (symmetric positive definite) inputs. (Triggered internally at /pytorch/aten/src/ATen/native/BatchLinearAlgebra.cpp:1765.)
+  x = torch.cholesky(x)
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/train_moe_staged.py:94: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  tot += float(loss); n += 1
+[P1] ep1/18 loss2.0845 317s
+[P1] ep2/18 loss2.0103 317s
+[P1] ep3/18 loss1.9857 317s
+[P1] ep4/18 loss1.9679 317s
+[P1] ep5/18 loss1.9523 317s
+[P1] ep6/18 loss1.9425 317s
+[P1] ep7/18 loss1.9364 317s
+[P1] ep8/18 loss1.9207 318s
+[P1] ep9/18 loss1.9187 317s
+[P1] ep10/18 loss1.9196 318s
+[P1] ep11/18 loss1.9116 318s
+[P1] ep12/18 loss1.9086 318s
+[P1] ep13/18 loss1.8898 318s
+[P1] ep14/18 loss1.8903 318s
+[P1] ep15/18 loss1.8939 318s
+[P1] ep16/18 loss1.8953 318s
+[P1] ep17/18 loss1.8930 318s
+[P1] ep18/18 loss1.8926 318s
+[P2] trainable params (IR-VIS head): 37.9K
+[P2-irvis] ep19/26 loss2.0561 34s
+[P2-irvis] ep20/26 loss1.9521 34s
+[P2-irvis] ep21/26 loss1.9494 34s
+[P2-irvis] ep22/26 loss1.9554 35s
+[P2-irvis] ep23/26 loss1.9490 34s
+[P2-irvis] ep24/26 loss1.9556 34s
+[P2-irvis] ep25/26 loss1.9436 34s
+[P2-irvis] ep26/26 loss1.9245 34s
+training done

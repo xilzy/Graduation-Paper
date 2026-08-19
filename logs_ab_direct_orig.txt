@@ -1,0 +1,41 @@
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+train crops: 10611  batches/epoch: 1061  per-task: {'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468}
+tasks (id order): ['gfp_pc', 'irvis', 'medical']  task_adaptive=False
+MoE params: 4.11M  routed=12 k=2 shared=1 task_cond=True
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/losses/__init__.py:256: UserWarning: torch.cholesky is deprecated in favor of torch.linalg.cholesky and will be removed in a future PyTorch release.
+L = torch.cholesky(A)
+should be replaced with
+L = torch.linalg.cholesky(A)
+and
+U = torch.cholesky(A, upper=True)
+should be replaced with
+U = torch.linalg.cholesky(A).mH
+This transform will produce equivalent results for all valid (symmetric positive definite) inputs. (Triggered internally at /pytorch/aten/src/ATen/native/BatchLinearAlgebra.cpp:1765.)
+  x = torch.cholesky(x)
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/train_moe.py:214: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  agg["rmi"] += loss_rmi.item(); agg["intensity"] += float(loss_int)
+epoch 1/20  lr 1.00e-03  loss 5.9526 (content 2.1731 structure 1.8261 aux 12.7216)  600.3s
+epoch 2/20  lr 8.00e-04  loss 5.4678 (content 1.9945 structure 1.6730 aux 12.7368)  598.5s
+epoch 3/20  lr 6.40e-04  loss 5.2578 (content 1.9531 structure 1.5908 aux 12.3018)  599.2s
+epoch 4/20  lr 5.12e-04  loss 5.1107 (content 1.9263 structure 1.5316 aux 12.1239)  599.5s
+epoch 5/20  lr 4.10e-04  loss 5.0653 (content 1.9143 structure 1.5151 aux 12.0880)  599.9s
+epoch 6/20  lr 3.28e-04  loss 5.0501 (content 1.9121 structure 1.5086 aux 12.0741)  599.8s
+epoch 7/20  lr 2.62e-04  loss 5.0091 (content 1.9032 structure 1.4927 aux 12.0460)  600.3s
+epoch 8/20  lr 2.10e-04  loss 4.9890 (content 1.8957 structure 1.4865 aux 12.0372)  600.2s
+epoch 9/20  lr 1.68e-04  loss 4.9738 (content 1.8806 structure 1.4865 aux 12.0265)  600.2s
+epoch 10/20  lr 1.34e-04  loss 4.9730 (content 1.8865 structure 1.4832 aux 12.0165)  600.5s
+epoch 11/20  lr 1.07e-04  loss 4.9606 (content 1.8802 structure 1.4801 aux 12.0165)  600.5s
+epoch 12/20  lr 8.59e-05  loss 4.9487 (content 1.8712 structure 1.4787 aux 12.0118)  600.3s
+epoch 13/20  lr 6.87e-05  loss 4.9493 (content 1.8735 structure 1.4778 aux 12.0116)  600.3s
+epoch 14/20  lr 5.50e-05  loss 4.9417 (content 1.8723 structure 1.4746 aux 12.0098)  600.5s
+epoch 15/20  lr 4.40e-05  loss 4.9337 (content 1.8642 structure 1.4747 aux 12.0094)  600.7s
+epoch 16/20  lr 3.52e-05  loss 4.9312 (content 1.8637 structure 1.4737 aux 12.0073)  600.9s
+epoch 17/20  lr 2.81e-05  loss 4.9151 (content 1.8582 structure 1.4684 aux 12.0054)  601.0s
+epoch 18/20  lr 2.25e-05  loss 4.9145 (content 1.8561 structure 1.4692 aux 12.0046)  600.5s
+epoch 19/20  lr 1.80e-05  loss 4.9346 (content 1.8649 structure 1.4748 aux 12.0044)  600.4s
+epoch 20/20  lr 1.44e-05  loss 4.9344 (content 1.8668 structure 1.4738 aux 12.0045)  600.5s
+training done

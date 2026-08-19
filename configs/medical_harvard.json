@@ -1,0 +1,17 @@
+{
+  "task": "medical",
+  "pairing": "folder",
+  "train_a_dir": "/ytech_m2v4_hdd/lizhongyin/data/Harvard-Medical/train/func",
+  "train_b_dir": "/ytech_m2v4_hdd/lizhongyin/data/Harvard-Medical/train/mri",
+  "test_a_dir": "/ytech_m2v4_hdd/lizhongyin/data/Harvard-Medical/test/func",
+  "test_b_dir": "/ytech_m2v4_hdd/lizhongyin/data/Harvard-Medical/test/mri",
+  "a_suffix": ".png",
+  "b_suffix": ".png",
+  "color_a": true,
+  "color_b": false,
+  "probe_size": 15,
+  "output_mode": "rgb",
+  "color_source": "a",
+  "func_source": "a",
+  "_note": "Harvard AANLIB medical (MRI-PET + MRI-SPECT, via CDDFuse test_img). A=functional pseudocolor (PET/SPECT, chroma=metabolic, kept and recombined to RGB), B=MRI (gray structure). 256x256, pre-registered. func_source=a -> functional-saliency preservation, analogous to GFP fluorescence."
+}

@@ -1,0 +1,13 @@
+config: ['configs/gfp_pc.json']
+name: p0_gfp_pc
+epochs: 10
+batch_size: 64
+lr: 0.001
+weight: [1, 5, 1, 2.5, 1, 1, 1]
+alpha: 2.0
+in_channel: 2
+window_size: 1
+patch: 170
+stride: 28
+workers: 8
+device: cuda:0

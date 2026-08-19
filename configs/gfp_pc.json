@@ -1,0 +1,13 @@
+{
+  "task": "gfp_pc",
+  "src_a_dir": "source images/GFP-PC/GFP",
+  "src_b_dir": "source images/GFP-PC/PCI",
+  "a_suffix": "-g.jpg",
+  "b_suffix": "-t.jpg",
+  "probe_size": 15,
+  "n_test": 30,
+  "output_mode": "rgb",
+  "color_source": "a",
+  "func_source": "a",
+  "_note": "GFP(A) is the color + functional source (green fluorescence); PCI(B) is grayscale structure. output_mode=rgb -> fused Y + GFP CbCr -> RGB. func_source=a -> FUNCTION axis (FuncCorr/FuncSal) measured on GFP salient regions. IR-VIS would use output_mode=gray, func_source=<IR>."
+}

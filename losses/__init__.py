@@ -37,7 +37,11 @@ def joint_grad(source1,source2,fused):
     grad_source2 = grad(source2)
     grad_fuse = grad(fused)
     joint_grad = torch.max(torch.abs(grad_source1), torch.abs(grad_source2))
-    Grad_value = L1(torch.abs(grad_fuse) - joint_grad) / (170 * 170)   #patch_size=170
+    # normalize by the ACTUAL pixel count (== spatial mean), not the hardcoded
+    # 170**2. Identical to the original for 170x170 crops, but scale-invariant so
+    # any/mixed crop size keeps the grad term on the same footing as ssim/rmi.
+    H, W = fused.shape[2], fused.shape[3]
+    Grad_value = L1(torch.abs(grad_fuse) - joint_grad) / (H * W)
     return Grad_value
 
 #自定义像素强度计算函数，限制融合图像的强度接近两个图像的平均强度

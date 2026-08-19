@@ -1,0 +1,31 @@
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+train crops: 2522  batches/epoch: 52  per-task: {'gfp_pc': 944, 'irvis': 1000, 'medical': 578}
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/losses/__init__.py:256: UserWarning: torch.cholesky is deprecated in favor of torch.linalg.cholesky and will be removed in a future PyTorch release.
+L = torch.cholesky(A)
+should be replaced with
+L = torch.linalg.cholesky(A)
+and
+U = torch.cholesky(A, upper=True)
+should be replaced with
+U = torch.linalg.cholesky(A).mH
+This transform will produce equivalent results for all valid (symmetric positive definite) inputs. (Triggered internally at /pytorch/aten/src/ATen/native/BatchLinearAlgebra.cpp:1765.)
+  x = torch.cholesky(x)
+epoch 1/20  lr 1.00e-03  loss 12.7220 (content 2.9235 structure 4.8993)  40.8s
+epoch 2/20  lr 8.00e-04  loss 8.6836 (content 2.4091 structure 3.1373)  39.9s
+epoch 3/20  lr 6.40e-04  loss 5.2888 (content 1.8328 structure 1.7280)  40.0s
+epoch 4/20  lr 5.12e-04  loss 4.9322 (content 1.7666 structure 1.5828)  40.0s
+epoch 5/20  lr 4.10e-04  loss 4.5441 (content 1.7658 structure 1.3892)  40.0s
+epoch 6/20  lr 3.28e-04  loss 4.4669 (content 1.7991 structure 1.3339)  40.5s
+epoch 7/20  lr 2.62e-04  loss 4.3754 (content 1.7752 structure 1.3001)  40.0s
+epoch 8/20  lr 2.10e-04  loss 4.3488 (content 1.7676 structure 1.2906)  39.9s
+epoch 9/20  lr 1.68e-04  loss 4.2752 (content 1.7654 structure 1.2549)  40.1s
+epoch 10/20  lr 1.34e-04  loss 4.3350 (content 1.7847 structure 1.2752)  40.0s
+epoch 11/20  lr 1.07e-04  loss 4.2516 (content 1.7830 structure 1.2343)  40.0s
+epoch 12/20  lr 8.59e-05  loss 4.2352 (content 1.7606 structure 1.2373)  40.0s
+epoch 13/20  lr 6.87e-05  loss 4.2361 (content 1.7749 structure 1.2306)  40.0s
+epoch 14/20  lr 5.50e-05  loss 4.1895 (content 1.7757 structure 1.2069)  18.7s
+hit max-steps, stopping
+training done

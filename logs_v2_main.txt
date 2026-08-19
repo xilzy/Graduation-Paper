@@ -1,0 +1,39 @@
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+MoE params 1.39M  routing=deepseek tasks=['gfp_pc', 'irvis', 'medical']
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/losses/__init__.py:256: UserWarning: torch.cholesky is deprecated in favor of torch.linalg.cholesky and will be removed in a future PyTorch release.
+L = torch.cholesky(A)
+should be replaced with
+L = torch.linalg.cholesky(A)
+and
+U = torch.cholesky(A, upper=True)
+should be replaced with
+U = torch.linalg.cholesky(A).mH
+This transform will produce equivalent results for all valid (symmetric positive definite) inputs. (Triggered internally at /pytorch/aten/src/ATen/native/BatchLinearAlgebra.cpp:1765.)
+  x = torch.cholesky(x)
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/train_moe_curri.py:123: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  tl_sum[tn] += float(lt) * int(m.sum()); tl_n[tn] += int(m.sum())
+ep1/20 lr1.00e-03 loss2.4531 per-task-loss{'gfp_pc': 2.227, 'irvis': 2.094, 'medical': 3.034} quota{'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468} 317s
+ep2/20 lr8.00e-04 loss2.3496 per-task-loss{'gfp_pc': 2.101, 'irvis': 2.039, 'medical': 2.916} quota{'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468} 316s
+ep3/20 lr6.40e-04 loss2.3200 per-task-loss{'gfp_pc': 2.087, 'irvis': 2.02, 'medical': 2.861} quota{'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468} 315s
+ep4/20 lr5.12e-04 loss2.3047 per-task-loss{'gfp_pc': 2.086, 'irvis': 2.002, 'medical': 2.833} quota{'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468} 315s
+ep5/20 lr4.10e-04 loss2.2939 per-task-loss{'gfp_pc': 2.072, 'irvis': 1.99, 'medical': 2.827} quota{'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468} 315s
+ep6/20 lr3.28e-04 loss2.2914 per-task-loss{'gfp_pc': 2.076, 'irvis': 1.997, 'medical': 2.808} quota{'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468} 314s
+ep7/20 lr2.62e-04 loss2.3401 per-task-loss{'gfp_pc': 2.08, 'irvis': 1.996, 'medical': 2.78} quota{'gfp_pc': 3540, 'irvis': 3249, 'medical': 4624} 338s
+ep8/20 lr2.10e-04 loss2.3299 per-task-loss{'gfp_pc': 2.084, 'irvis': 1.977, 'medical': 2.766} quota{'gfp_pc': 3540, 'irvis': 3249, 'medical': 4624} 338s
+ep9/20 lr1.68e-04 loss2.3231 per-task-loss{'gfp_pc': 2.072, 'irvis': 1.992, 'medical': 2.754} quota{'gfp_pc': 3658, 'irvis': 3249, 'medical': 4624} 341s
+ep10/20 lr1.34e-04 loss2.3280 per-task-loss{'gfp_pc': 2.078, 'irvis': 2.0, 'medical': 2.75} quota{'gfp_pc': 3540, 'irvis': 3249, 'medical': 4624} 338s
+ep11/20 lr1.07e-04 loss2.3214 per-task-loss{'gfp_pc': 2.081, 'irvis': 1.985, 'medical': 2.741} quota{'gfp_pc': 3540, 'irvis': 3249, 'medical': 4624} 338s
+ep12/20 lr8.59e-05 loss2.3136 per-task-loss{'gfp_pc': 2.082, 'irvis': 1.972, 'medical': 2.736} quota{'gfp_pc': 3658, 'irvis': 3249, 'medical': 4624} 341s
+ep13/20 lr6.87e-05 loss2.3187 per-task-loss{'gfp_pc': 2.073, 'irvis': 1.999, 'medical': 2.737} quota{'gfp_pc': 3658, 'irvis': 3249, 'medical': 4624} 341s
+ep14/20 lr5.50e-05 loss2.3160 per-task-loss{'gfp_pc': 2.07, 'irvis': 1.997, 'medical': 2.728} quota{'gfp_pc': 3540, 'irvis': 3249, 'medical': 4624} 338s
+ep15/20 lr4.40e-05 loss2.3189 per-task-loss{'gfp_pc': 2.08, 'irvis': 1.998, 'medical': 2.726} quota{'gfp_pc': 3540, 'irvis': 3249, 'medical': 4624} 338s
+ep16/20 lr3.52e-05 loss2.3119 per-task-loss{'gfp_pc': 2.063, 'irvis': 2.0, 'medical': 2.728} quota{'gfp_pc': 3658, 'irvis': 3249, 'medical': 4624} 343s
+ep17/20 lr2.81e-05 loss2.3111 per-task-loss{'gfp_pc': 2.078, 'irvis': 1.985, 'medical': 2.718} quota{'gfp_pc': 3540, 'irvis': 3249, 'medical': 4624} 339s
+ep18/20 lr2.25e-05 loss2.3066 per-task-loss{'gfp_pc': 2.067, 'irvis': 1.988, 'medical': 2.72} quota{'gfp_pc': 3658, 'irvis': 3249, 'medical': 4624} 342s
+ep19/20 lr1.80e-05 loss2.3113 per-task-loss{'gfp_pc': 2.072, 'irvis': 1.992, 'medical': 2.724} quota{'gfp_pc': 3658, 'irvis': 3249, 'medical': 4624} 342s
+ep20/20 lr1.44e-05 loss2.3058 per-task-loss{'gfp_pc': 2.073, 'irvis': 1.982, 'medical': 2.717} quota{'gfp_pc': 3658, 'irvis': 3249, 'medical': 4624} 341s
+training done

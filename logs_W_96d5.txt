@@ -1,0 +1,50 @@
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+train crops: 10611  batches/epoch: 1061  per-task: {'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468}
+tasks (id order): ['gfp_pc', 'irvis', 'medical']  task_adaptive=False
+MoE params: 5.11M  routed=12 k=2 shared=1 task_cond=True
+Traceback (most recent call last):
+  File "/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/train_moe.py", line 229, in <module>
+    main()
+  File "/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/train_moe.py", line 163, in main
+    out, aux = model(inp, tid)
+               ^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/Networks/net_moe.py", line 311, in forward
+    t = self.basicLayer(feat, (feat.shape[2], feat.shape[3]), te)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/Networks/net_moe.py", line 230, in forward
+    x = blk(x, x_size, task_emb)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/Networks/net_moe.py", line 210, in forward
+    y = self.mlp(y.reshape(B, H * W, C), task_emb).view(B, H, W, C)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/Networks/net_moe.py", line 122, in forward
+    ye = self.experts[e](flat[idx]) * we[idx].unsqueeze(-1)
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 54.00 MiB. GPU 0 has a total capacity of 79.11 GiB of which 10.50 MiB is free. Process 276394 has 79.09 GiB memory in use. Of the allocated memory 78.02 GiB is allocated by PyTorch, and 405.93 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

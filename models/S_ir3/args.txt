@@ -1,0 +1,24 @@
+config: ['configs/gfp_pc.json', 'configs/irvis_msrs.json', 'configs/medical_harvard.json']
+name: S_ir3
+epochs: 26
+phase1: 18
+irvis_task: 1
+batch_size: 16
+lr: 0.001
+lr2: 0.0005
+lr_decay: 0.8
+weight: [2, 2, 2, 2, 4, 0, 3]
+weight2: [2.0, 2.0, 2.0, 2.0, 4.0, 0.0, 4.0]
+alpha: 2.0
+ms_grad2: 1.0
+crops_per_task: 4000
+patch: 170
+out_channel: 64
+window_size: 8
+n_routed: 12
+fusion_head: blenddetail
+res_scale: 0.25
+routing: softmax
+aux_weight: 0.01
+workers: 8
+device: cuda:0

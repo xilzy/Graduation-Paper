@@ -1,0 +1,27 @@
+config: ['configs/gfp_pc.json', 'configs/irvis_msrs.json', 'configs/medical_harvard.json']
+name: h2h_moe_sym
+epochs: 8
+batch_size: 32
+lr: 0.001
+weight: [1, 5, 1, 2.5, 1, 1, 1]
+alpha: 2.0
+lr_decay: 0.8
+in_channel: 2
+window_size: 1
+patch: 170
+crops_per_task: 4000
+fixed_pool: False
+n_routed: 4
+k: 2
+n_shared: 1
+out_channel: 16
+depth: 3
+num_heads: 8
+aux_weight: 0.01
+no_task_cond: False
+out_scale: False
+no_task_bias: False
+task_adaptive: False
+workers: 8
+device: cuda:0
+max_steps: 0

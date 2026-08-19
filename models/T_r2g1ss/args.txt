@@ -1,0 +1,33 @@
+config: ['configs/gfp_pc.json', 'configs/irvis_msrs.json', 'configs/medical_harvard.json']
+name: T_r2g1ss
+epochs: 20
+batch_size: 16
+lr: 0.001
+weight: [3.0, 3.0, 2.0, 2.0, 4.0, 0.0, 3.0]
+alpha: 2.0
+lr_decay: 0.8
+in_channel: 2
+window_size: 8
+patch: 170
+crops_per_task: 4000
+fixed_pool: False
+n_routed: 12
+k: 2
+n_shared: 1
+out_channel: 64
+depth: 3
+num_heads: 8
+fusion_head: blenddetail
+res_scale: 0.2
+routing: softmax
+ms_grad: 1.0
+aux_weight: 0.01
+no_task_cond: False
+out_scale: True
+no_task_bias: False
+task_adaptive: False
+loss_mode: maxfuse
+ssim_target: max
+workers: 8
+device: cuda:0
+max_steps: 0

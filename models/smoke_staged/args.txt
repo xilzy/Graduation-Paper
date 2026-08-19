@@ -1,0 +1,24 @@
+config: ['configs/gfp_pc.json', 'configs/irvis_msrs.json', 'configs/medical_harvard.json']
+name: smoke_staged
+epochs: 3
+phase1: 2
+irvis_task: 1
+batch_size: 8
+lr: 0.001
+lr2: 0.0005
+lr_decay: 0.8
+weight: [2, 2, 2, 2, 4, 0, 3]
+weight2: [3, 3, 2, 2, 4, 0, 4]
+alpha: 2.0
+ms_grad2: 1.0
+crops_per_task: 120
+patch: 170
+out_channel: 64
+window_size: 8
+n_routed: 12
+fusion_head: blenddetail
+res_scale: 0.3
+routing: softmax
+aux_weight: 0.01
+workers: 4
+device: cuda:0

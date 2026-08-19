@@ -84,5 +84,9 @@ class Conv2d(nn.Conv2d):
 
             out = (out * weight.unsqueeze(0)).view(b, self.oc, -1)
 
-            return torch.matmul(out, x_un).view(b, self.oc, int(np.sqrt(l)), int(np.sqrt(l)))
+            # output spatial size from the conv arithmetic (do NOT assume H==W:
+            # int(sqrt(l)) silently breaks on non-square inputs e.g. 640x480).
+            ho = (h + 2 * self.padding[0] - self.dilation[0] * (self.ks - 1) - 1) // self.stride[0] + 1
+            wo = (w + 2 * self.padding[1] - self.dilation[1] * (self.ks - 1) - 1) // self.stride[1] + 1
+            return torch.matmul(out, x_un).view(b, self.oc, ho, wo)
             

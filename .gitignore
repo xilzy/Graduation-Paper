@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.npshim/
+models/**
+!models/**/
+!models/**/args.txt
+!models/W_96d4L/model_26.pth

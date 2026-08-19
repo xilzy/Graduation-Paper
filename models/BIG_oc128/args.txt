@@ -1,0 +1,33 @@
+config: ['configs/gfp_pc.json', 'configs/irvis_msrs.json', 'configs/medical_harvard.json']
+name: BIG_oc128
+epochs: 20
+batch_size: 8
+lr: 0.001
+weight: [2.0, 2.0, 2.0, 2.0, 4.0, 0.0, 3.0]
+alpha: 2.0
+lr_decay: 0.8
+in_channel: 2
+window_size: 8
+patch: 170
+crops_per_task: 4000
+fixed_pool: False
+n_routed: 12
+k: 2
+n_shared: 1
+out_channel: 128
+depth: 3
+num_heads: 8
+fusion_head: blend
+res_scale: 0.0
+routing: softmax
+ms_grad: 0.0
+aux_weight: 0.01
+no_task_cond: False
+out_scale: True
+no_task_bias: False
+task_adaptive: False
+loss_mode: maxfuse
+ssim_target: max
+workers: 8
+device: cuda:0
+max_steps: 0

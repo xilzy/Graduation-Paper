@@ -1,0 +1,27 @@
+config: ['configs/gfp_pc.json', 'configs/irvis_msrs.json', 'configs/medical_harvard.json']
+name: smoke_curri
+epochs: 3
+warmup: 1
+cap: 1.5
+beta: 1.0
+curri_direction: high
+batch_size: 8
+lr: 0.001
+weight: [2.0, 2.0, 2.0, 2.0, 4.0, 0.0, 3.0]
+alpha: 2.0
+lr_decay: 0.8
+crops_per_task: 120
+patch: 170
+out_channel: 64
+window_size: 8
+n_routed: 12
+k: 2
+n_shared: 1
+num_heads: 8
+aux_weight: 0.01
+ssim_target: max
+fusion_head: blend
+res_scale: 0.0
+routing: deepseek
+workers: 4
+device: cuda:0

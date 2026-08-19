@@ -1,0 +1,24 @@
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/ytech_m2v4_hdd/lizhongyin/venv/lib/python3.11/site-packages/torch/functional.py:554: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at /pytorch/aten/src/ATen/native/TensorShape.cpp:4322.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+train crops: 10611  batches/epoch: 331  per-task: {'gfp_pc': 3894, 'irvis': 3249, 'medical': 3468}
+/ytech_m2v4_hdd/lizhongyin/code/Graduation-Paper/losses/__init__.py:256: UserWarning: torch.cholesky is deprecated in favor of torch.linalg.cholesky and will be removed in a future PyTorch release.
+L = torch.cholesky(A)
+should be replaced with
+L = torch.linalg.cholesky(A)
+and
+U = torch.cholesky(A, upper=True)
+should be replaced with
+U = torch.linalg.cholesky(A).mH
+This transform will produce equivalent results for all valid (symmetric positive definite) inputs. (Triggered internally at /pytorch/aten/src/ATen/native/BatchLinearAlgebra.cpp:1765.)
+  x = torch.cholesky(x)
+epoch 1/8  lr 1.00e-03  loss 6.2730 (content 2.0392 structure 2.1169)  170.1s
+epoch 2/8  lr 8.00e-04  loss 4.4189 (content 1.7894 structure 1.3147)  168.9s
+epoch 3/8  lr 6.40e-04  loss 4.0359 (content 1.7823 structure 1.1268)  168.9s
+epoch 4/8  lr 5.12e-04  loss 3.9171 (content 1.7668 structure 1.0752)  168.9s
+epoch 5/8  lr 4.10e-04  loss 3.8549 (content 1.7748 structure 1.0401)  168.8s
+epoch 6/8  lr 3.28e-04  loss 3.7794 (content 1.7730 structure 1.0032)  168.9s
+epoch 7/8  lr 2.62e-04  loss 3.7387 (content 1.7682 structure 0.9853)  168.9s
+epoch 8/8  lr 2.10e-04  loss 3.6994 (content 1.7735 structure 0.9630)  168.9s
+training done
